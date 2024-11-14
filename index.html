@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="#" onclick="reload()"></a>
+            <img src="logo.png" alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#Ipl" id="ipl" onclick="onNavItemClick('ipl')">IPL</a></li>
+            <li><a href="#Finance" id="finance" onclick="onNavItemClick('finance')">Finance</a></li>
+            <li><a href="#Politics" id="politics" onclick="onNavItemClick('politics')">Politics</a></li>
+            <li><a href="#Technology" id="technology" onclick="onNavItemClick('technology')">Technology</a></li>
+            <li><a href="#Entertainment" id="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a></li>
+        </ul>
+
+        <form class="search-bar" action="#" method="GET">
+            <input id="search-text" type="text" placeholder="Search..." name="search">
+            <button id="search-button"  class="btn" type="submit">Search</button>
+        </form>
+
+        
+        <div class="dark-mode-toggle-btn">
+            <input type="checkbox" id="toggle" class="toggle-checkbox">
+            <label for="toggle" class="toggle-label">
+                <span class="toggle-ball"></span>
+            </label>
+        </div>
+
+
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
